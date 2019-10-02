@@ -1,0 +1,15 @@
+<!-- templates/playlists_index.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Playlists</h1>
+
+<div class='row'>
+    {% for playlist in playlists %}
+        <div class='col-md-3'>
+            <h2><a href='/playlists/{{ playlist._id }}'>{{ playlist.title }}</a></h2>
+            <small>{{ playlist.description }}</small>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

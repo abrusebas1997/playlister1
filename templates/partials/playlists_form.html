@@ -1,0 +1,23 @@
+<!-- templates/partials/playlists_form.html -->
+
+<fieldset>
+    <legend>Edit Playlist</legend>
+    <!-- TITLE -->
+    <div class='form-group'>
+        <label for='playlist-title'>Title</label><br>
+        <input class='form-control' id='playlist-title' type='text' name='title' value='{{ playlist.title }}'/>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class='form-group'>
+        <label for='description'>Description</label><br>
+        <input class='form-control' id='description' type='text' name='description' value='{{ playlist.description }}' />
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class='form-group'>
+        <label for='playlist-videos'>Videos</label><br/>
+        <p class='text-muted'>Add videos in the form of 'https://youtube.com/embed/KEY'. Separate with a newline.</p>
+        <textarea class='form-control' id='playlist-videos' name='videos' rows='10' />{{ "\n".join(playlist.videos) }}</textarea>
+    </div>
+</fieldset>
