@@ -19,7 +19,7 @@ comments = db.comments
 
 app = Flask(__name__)
 
-# OUR MOCK ARRAY OF PROJECTS
+# OUR MOCK ARRAY OF PROJECT
 # playlists = [
 #     { 'title': 'Cat Videos', 'description': 'Cats acting weird' },
 #     { 'title': '80\'s Music', 'description': 'Don\'t stop believing!' }
