@@ -80,10 +80,6 @@ def playlists_delete(playlist_id):
     playlists.delete_one({'_id': ObjectId(playlist_id)})
     return redirect(url_for('playlists_index'))
 
-if __name__ == '__main__':
-  app.run(debug=True, host='0.0.0.0', port=os.environ.get('PORT', 5000))
-
-
 ########## COMMENT ROUTES ##########
 
 @app.route('/playlists/comments', methods=['POST'])
@@ -103,3 +99,6 @@ def comments_delete(comment_id):
     comment = comments.find_one({'_id': ObjectId(comment_id)})
     comments.delete_one({'_id': ObjectId(comment_id)})
     return redirect(url_for('playlists_show', playlist_id=comment.get('playlist_id')))
+
+if __name__ == '__main__':
+  app.run(debug=True, host='0.0.0.0', port=os.environ.get('PORT', 5000))
